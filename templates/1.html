@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>		
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+      <link href="/static/css/bootstrap.min.css" rel="stylesheet">      
+      <script src="/static/javascript/jquery.min.js"></script>	  
+	  <script src="/static/javascript/bootstrap.min.js"></script>	  		
+<title>HccDB</title>
+	</head>
+
+	<body>
+	<div class="container-fluid">
+    <div class="row clearfix">
+
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+                    	<span class="sr-only">Toggle navigation</span>
+                     	<span class="icon-bar"></span>
+                     	<span class="icon-bar"></span>
+                     	<span class="icon-bar"></span>
+                    </button> 
+                    <a class="navbar-brand" href="{% url 'app:index' %}">HccDB</a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="{% url 'app:genelist' %}">Gene</a>
+                        </li>
+                        <li>
+                             <a href="{% url 'app:pathwaylist' %}">Pathway</a>
+                        </li>
+                        <li>
+                             <a href="{% url 'app:druglist' %}">Drug</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'app:literaturelist' %}">Literature</a>
+                        </li>
+                        
+                    </ul>
+
+                    <form class="navbar-form navbar-left" role="search" action="/app/search/" method="get" accept-charset="utf-8">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type='search' class="form-control" placeholder="search" name="q"/>
+                        </div> 
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </form>
+
+                    <ul class="nav navbar-nav navbar-right">                       
+                        <li>
+                             <a href="{% url 'app:About' %}">About</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            
+		
+    	<div class="jumbotron">
+    		<p>
+						<h1 style="font-family:verdana;font-size:60px">
+            				<strong><font color="#0000FF">Human colon cancer Database</font></strong>
+        				</h1>
+        			</p>
+        	<div class="row clearfix">
+            	<div class="col-md-7 column">
+                	<p style="font-family:Microsoft Yahei;text-align: justify;text-indent:2em">
+                      HccDB is a database system for human colon cancer information. It mainly includes genes, pathways, drugs and related literature about colon cancer.
+                      From a genetic standpoint, colon cancer is one of the most well understood cancers. However, colon cancer remains the third most common cancer in the world and the leading cause of cancer morbidity and mortality.
+                      Therefore, it is urgent to further study the pathogenesis of colon cancer and establish effective prevention, diagnosis and treatment methods.
+                	</p>
+            	</div>
+            	<div class="col-md-5 column">
+                <img src="/static/image/img1.png" style="margin-left:50px" height='300px' width="400px">
+            	</div>       
+    		</div>         
+        </div>
+
+    </div>
+	</div>
+	</body>
+</html>
