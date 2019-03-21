@@ -1,3 +1,4 @@
+#coding=utf-8
 # @Author  : Fizzyi
 from django.conf.urls import url
 
