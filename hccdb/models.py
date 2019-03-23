@@ -9,7 +9,7 @@ class Gene(models.Model):
     OtherName = models.CharField(max_length=255)
 
     class Meta:
-        db_table = "Gene"
+        db_table = "gene"
 
 class GeneDisease(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -19,7 +19,7 @@ class GeneDisease(models.Model):
     link = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'GeneDisease'
+        db_table = 'genedisease'
 
 class GenePathway(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -29,7 +29,7 @@ class GenePathway(models.Model):
     link = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'GenePathway'
+        db_table = 'genepathway'
 
 class GeneSeq(models.Model):
     GeneNumber = models.CharField(max_length=255,primary_key=True)
@@ -37,7 +37,7 @@ class GeneSeq(models.Model):
     NTseq = models.TextField()
 
     class Meta:
-        db_table = 'GeneSeq'
+        db_table = 'geneseq'
 
 # Pathway
 class Pathway(models.Model):
@@ -46,7 +46,7 @@ class Pathway(models.Model):
     link = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'Pathway'
+        db_table = 'pathway'
 
 #Drug
 class DrugATC(models.Model):
@@ -54,7 +54,7 @@ class DrugATC(models.Model):
     ATCCode = models.CharField(max_length=255)
 
     class Meta:
-        db_table ='DrugATC'
+        db_table ='drugatc'
 
 class DrugBankEnzymes(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -66,7 +66,7 @@ class DrugBankEnzymes(models.Model):
     link = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'DrugBankEnzymes'
+        db_table = 'drugbankenzymes'
 
 class Drug(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -75,7 +75,7 @@ class Drug(models.Model):
     Formula = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'Drug'
+        db_table = 'drug'
 
 class Indications(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -84,7 +84,7 @@ class Indications(models.Model):
     DrugID = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'Indications'
+        db_table = 'indications'
 
 class Se(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -103,7 +103,7 @@ class DrugTargetPathway(models.Model):
     link = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'DrugTargetPathway'
+        db_table = 'drugtargetpathway'
 
 class DrugBankTargets(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -115,7 +115,7 @@ class DrugBankTargets(models.Model):
     link = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'DrugBankTargets'
+        db_table = 'drugbanktargets'
 
 class DrugMoA(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -124,7 +124,7 @@ class DrugMoA(models.Model):
     MoA = models.CharField(max_length=255)
     
     class Meta:
-        db_table = 'DrugMoA'
+        db_table = 'drugmoa'
 
 #patienSample
 class GEO(models.Model):
@@ -153,7 +153,7 @@ class GEO(models.Model):
     link = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'GEO'
+        db_table = 'geo'
 
 class GEOPlatforms(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -162,7 +162,7 @@ class GEOPlatforms(models.Model):
     Platforms = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'GEOPlatforms'
+        db_table = 'geoplatforms'
 
 class GEOSamples(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -171,7 +171,7 @@ class GEOSamples(models.Model):
     Samples = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'GEOSamples'
+        db_table = 'geosamples'
 
 # Literature
 class Literature(models.Model):
@@ -180,4 +180,4 @@ class Literature(models.Model):
     link = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'Literature'
+        db_table = 'literature'
