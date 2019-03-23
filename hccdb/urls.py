@@ -6,7 +6,7 @@ from hccdb.views import *
 
 urlpatterns = [
     #首页
-    url(r'index/',index,name='index'),
+    url(r'^index/',index,name='index'),
     #gene
     url(r'gene/(?P<gene_number>\S+)',gene,name='gene'),
     url(r'genelist/',genelist,name='genelist'),

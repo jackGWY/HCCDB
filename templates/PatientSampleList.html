@@ -68,12 +68,12 @@
 
     <div id="nav">
             <ul>
-            <li><a href="{% url 'app:About' %}" target="content"><font color=white>About</font></a></li>
-            <li><a href="{% url 'app:literaturelist' %}" target="content"><font color=white>Literature</font></a></li>
-            <li><a href="{% url 'app:druglist' %}" target="content"><font color=white>Drug</font></a></li>
-            <li><a href="{% url 'app:pathwaylist' %}" target="content"><font color=white>Pathway</font></a></li>
-            <li><a href="{% url 'app:genelist' %}" target="content"><font color=white>Gene</font></a></li>        
-                <li><a href="{% url 'app:index' %}" target="content"><font color=white>Home</font></a></li> 
+            <li><a href="{% url 'app:About' %}"><font color=white>About</font></a></li>
+            <li><a href="{% url 'app:literaturelist' %}"><font color=white>Literature</font></a></li>
+            <li><a href="{% url 'app:druglist' %}"><font color=white>Drug</font></a></li>
+            <li><a href="{% url 'app:pathwaylist' %}"><font color=white>Pathway</font></a></li>
+            <li><a href="{% url 'app:genelist' %}"><font color=white>Gene</font></a></li>        
+                <li><a href="{% url 'app:index' %}"><font color=white>Home</font></a></li> 
             </ul>
     </div>
     
@@ -93,7 +93,7 @@
 	        	<table cellspacing="0" class="table table-striped">
 					<tbody>
 					<tr>
-						<th>SerisesID</th>
+						<th>SeriesID</th>
 						<th>Title</th>
 					</tr>
 					{% for i in geo_list %}

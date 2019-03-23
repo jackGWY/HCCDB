@@ -20,5 +20,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url(r'app/',include(('hccdb.urls'),namespace='app'))
+    url(r'HCCDB/',include(('hccdb.urls'),namespace='app'))
 ]
